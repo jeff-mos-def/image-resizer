@@ -1,0 +1,178 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Light and dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Heading styling */
+h1 {
+    animation: slideIn 1.5s ease-out forwards;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Slide-in animation for the heading */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ensure all rows and the container are properly centered */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally center all elements in the container */
+    justify-content: center; /* Center elements vertically (if needed) */
+    gap: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Buttons and file input styles */
+button, label.custom-file-upload {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #000;
+    font-size: 14px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover, label.custom-file-upload:hover {
+    background-color: #2196f3;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+body.dark-mode button, body.dark-mode label.custom-file-upload {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode button:hover, body.dark-mode label.custom-file-upload:hover {
+    background-color: #666;
+}
+
+/* Reset button specific styling */
+#resetButton {
+    background-color: #0615f3;
+    color: #fff;
+}
+
+#resetButton:hover {
+    background-color: #0412c9;
+}
+
+/* Canvas Styling */
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 3px solid rgba(0, 123, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    animation: glow 2s infinite alternate;
+    max-width: 100%; /* Prevent canvas from exceeding the screen width */
+}
+
+
+/* Canvas glow effect */
+@keyframes glow {
+    0% {
+        border-color: rgba(0, 123, 255, 0.6);
+        box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+    }
+    100% {
+        border-color: rgba(0, 123, 255, 0.9);
+        box-shadow: 0 0 25px rgba(0, 123, 255, 0.6);
+    }
+}
+
+/* File input styling */
+input[type="file"] {
+    display: none; /* Hide default file input */
+}
+
+label.custom-file-upload {
+    display: inline-block;
+    text-align: center;
+}
+
+/* File name display styling */
+.file-name {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    min-width: 150px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+body.dark-mode .file-name {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+/* Style for the theme switch button */
+.theme-switch {
+    margin-bottom: 25px; /* Increase space below the button */
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #444;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.theme-switch:hover {
+    background-color: #666;
+    transform: scale(1.05); /* Add a subtle hover effect */
+}
+
+#clearButton {
+    background-color: #0615f3;
+    color: #fff;
+}
+
+#clearButton:hover {
+    background-color: #0615f3;
+}

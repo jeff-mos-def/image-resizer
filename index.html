@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+    <h1>Image Resizer</h1>
+
+    <!-- Theme Switch -->
+    <button id="themeSwitch" class="theme-switch">Switch to Light Mode</button>
+
+    <!-- File Input Row -->
+    <div class="container">
+        <div class="row">
+            <label for="inputImage" class="custom-file-upload">Choose File</label>
+            <input type="file" id="inputImage" accept="image/*">
+            <span id="fileName" class="file-name">No file selected</span>
+        </div>
+
+        <!-- Image Editing Buttons -->
+        <div class="row">
+            <button id="cropButton">Crop</button>
+            <button id="undoButton">Undo</button>
+            <button id="resetButton">Reset</button>
+            <button id="clearButton">Clear Image</button>
+            <button id="downloadImageButton" style="display: none;">Download Image</button>
+        </div>
+
+        <!-- Resizing Controls -->
+        <div class="row">
+            <label for="width">Width: </label>
+            <input type="number" id="width" value="100">
+            <label for="height">Height: </label>
+            <input type="number" id="height" value="100">
+            <button id="resizeButton">Resize</button>
+        </div>
+
+        <!-- Resized Image Download Link 
+        <a id="downloadLink" href="#" download="resized-image.png" style="display:none;">Download Resized Image</a> -->
+    </div>
+
+    <!-- Canvas -->
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
